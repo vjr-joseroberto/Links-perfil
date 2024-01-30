@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} /*zerei todas as margens*/
+
+:root {
+    --text-color: white;
+    --bg-url: url(./assets/bg-mobile.jpg);
+    --bg-url: url(./assets/im4.jpg);
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.05) ;
+    --surface-color-hover: rgba(0, 0, 0, 0.2);
+    --highlight-color: rgba(255, 255, 255, 0.1);
+    --switch-bg-url: url(./assets/moon-stars.svg);
+} /*definindo uma variavel, tudo que tiver o nome --text-color sera branco*/
+
+
+.light{
+    --text-color: black;
+    --bg-url: url(./assets/im1.jpg);
+    --stroke-color:rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(0, 0, 0, 0.1);
+    --switch-bg-url: url(./assets/sun.svg);
+}
+
+body {
+    /*background-image: url(./assets/bg-mobile.jpg);
+    background-repeat: no-repeat; /*sem repeticoes*/
+    /*background-position: top center; /*centralizando a imagem*/
+    /*background-size: cover; /*cobre a imagem que ficaria em branco no aparelho*/
+    /*agrupando tudo
+    background: color image repeat position/size*/
+    background: var(--bg-url) no-repeat top center/cover;
+    
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    color: var(--text-color);
+}
+
+#container {
+    width: 360px;
+    /*height: 712px;*/
+    /*border: 1px solid red;  
+    /*margin-right: auto; /*deixando a caixa centralizada*/
+    /*margin-left: auto;*/
+    margin: auto;
+    /*display: block; /*usa a largura completa para colocar na parte abaixo dela*/
+    /*display: inline; /*fica em linha, nao na linha abaixo*/
+    /*padding-top: 56px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    /*margin: top right bottom left;
+    margim: cima/baixo lados;*/
+    margin: 56px auto 0px;
+    padding: 0 24px;
+}
+
+/*profile*/
+#profile {
+    text-align: center;
+    padding: 24px;
+}
+
+#profile img {
+    width: 112px;
+}
+
+#profile p{
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+/*switch*/
+
+#switch {
+    /**border: 1px solid red;
+    so para ver o tamanho do espaco onde esta*/
+    position: relative;
+    /*relativizar o meu absoluto (switch button)*/
+    width: 64px;
+    margin: 4px auto;
+}
+
+#switch button {
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bg-url) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+    position: absolute;
+    /*sobreposicao com o span*/
+    /**bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 50%;*/
+    right: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+    /*tamanho dele para fora da caixa*/
+}
+
+.light #switch button {
+    right: 0;
+    left: initial;
+}
+
+/*track - botao*/
+#switch span{
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    /*-webkit-backdrop-filter: blur(4px);
+    essa linha da erro, nao sei pq.. nao aceita em mozila/crome*/
+    border-radius: 9999px;
+}
+
+
+
+
+
+
+
+
+/* links */
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    /*row - um ao lado do outro; column - um abaixo do outro*/
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px 0;
+}
+
+ul li a {
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    /*justify-content: alinha a caixa no meio (largura)*/
+    text-align: justify;
+    align-items: center;
+    /*align-items: alinha exatamente no meio da caixa(altura) pra colocar*/
+
+    height: 52px;
+    padding: 16px 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    /*o quarto elemento e a transparencia*/
+    border-radius: 8px;
+    /*borda arredondada*/
+    text-decoration: none;
+    /*undeline (linha abaixo), line-through (riscado) ou overline (linha pra cima)*/
+    font-weight: 500;
+
+    transition: background 0.5s;
+    /*quais propriedades transacionar.. por qnto tempo*/
+}
+
+/*psuedo seletor - :hover*/
+ul li a:hover { /*passar o mause.. muda de cor*/
+    background-color: var(--surface-color-hover);
+    border: 1.5px solid white;
+    border: 1.5px solid var(--text-color);
+}
+
+#social-links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 24px 0;
+    font-size: 24px;
+}
+
+#social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    transition: background 0.2s;
+    border-radius: 50%;
+    /*tirar o border e fica no quadrado para o circulo, interessante de ver*/
+}
+
+#social-links a:hover {
+    background: var(--highlight-color);
+    padding: 16px;
+    border-radius: 50%;
+}
+
+footer {
+    padding: 24px;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+}
