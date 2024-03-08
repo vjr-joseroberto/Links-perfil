@@ -1,76 +1,150 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Josefin+Sans:wght@200&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-        <meta charset="UTF-8">
-        <meta ttp-equiv="X-UA0-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>DevLinks</title>
-        <link rel="stylesheet" href="./style.css">
-        <!--./ significa esta na mesma pasta; poderia deixar direto sem tbm se tiver na mesma pasta-->
-    </head>
-    <body>
-        <!--id é o identificador, so posso ter um com cada nome ou tera erro-->
-        <div id="container">
-            <div id="profile">
-                <img src="./assets/preto.png" alt="Foto 
-                    de Jose Roberto sorrindo, usando xyz roupa 
-                    e fundo xyz"
-                />
-                <p>@vjr.joseroberto</p>
-            </div>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Josefin+Sans:wght@200&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta ttp-equiv="X-UA0-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- o viewport; ela e a parte visivel do meu dipositivo; serve para colocar imagem mudando conforme a sua janela de visuializacao muda-->
+    <title>DevLinks</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="assets/VJR.png" type="image/x-icon" />
+    <!--./ significa esta na mesma pasta; poderia deixar direto sem tbm se tiver na mesma pasta-->
+  </head>
+  <body>
+    <header>
+      <img
+        id="bandeira-usa"
+        width="48"
+        height="48"
+        src="https://img.icons8.com/emoji/48/united-states-emoji.png"
+        alt="united-states-emoji"
+      />
+      <img
+        id="bandeira-bra"
+        width="48"
+        height="48"
+        src="https://img.icons8.com/emoji/48/brazil-emoji.png"
+        alt="brazil-emoji"
+      />
+      <img
+        id="bandeira-esp"
+        width="48"
+        height="48"
+        src="https://img.icons8.com/emoji/48/spain-emoji.png"
+        alt="spain-emoji"
+      />
+    </header>
+    <!--id é o identificador, so posso ter um com cada nome ou tera erro-->
+    <div id="container">
+      <div id="profile">
+        <img
+          src="./assets/preto.png"
+          alt="Foto 
+                    de Jose Roberto sorrindo, usando xyz roupa e fundo xyz"
+        />
+        <p>@vjr.joseroberto</p>
+      </div>
 
-            <div id="switch" onclick="toggleMode()">
-                <button></button>
-                <span></span>
-            </div>
+      <div id="switch" onclick="toggleMode()">
+        <button type="button">oi</button>
+        <span></span>
+      </div>
 
-            <ul>
-                <li>
-                    <a href="#">Igarapé</a>
-                </li>
-                <li>
-                    <a href="https://www.ime.unicamp.br/~semap/" rel="noopener" target="_blank">SEMAP</a>
-                </li>
-                <li>
-                    <a href="https://github.com/vjr-joseroberto" rel="noopener" target="_blank">ver meu portfolio</a>
-                </li>
-                <!--<li>
-                    <a href="https://rocketseat.com.br/explorer" rel="noopener" target="_blank">Explorer - Rocketseat</a>
-                </li>-->
-            </ul>
-            <div id="social-links">
-                <a href="https://github.com/vjr-joseroberto" rel="noopener" target="_blank">
-                    <ion-icon name="logo-github"></ion-icon>
-                </a>
-                <a href="https://www.instagram.com/vjr.joseroberto" rel="noopener" target="_blank">
-                    <ion-icon name="logo-instagram"></ion-icon>
-                </a>
-                <!--<a href="https://github.com/maykbrito" rel="noopener" target="_blank">
-                    <ion-icon name="logo-youtube"></ion-icon>
-                </a>-->
-                <a href="https://www.linkedin.com/in/jos%C3%A9-roberto-vieira-junior-4549b1105?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" rel="noopener" target="_blank">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                </a>
-                <!--<ion-icon name="heart"></ion-icon>-->
-                <!--<ion-icon name="heart"></ion-icon>-->
-            </div>
-            <footer>
-                Deixe que seus medos morram de fome
-            </footer>
-        </div>
-        <script 
-        type="module" 
-        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-        ></script>
-        <script 
-        nomodule 
-        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-        ></script>
-        <!--utilizado para gerar os icons-->
+      <ul>
+        <li class="a1">
+          <a href="./home.html">Quem sou eu?</a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/vjr-joseroberto"
+            rel="noopener"
+            target="_blank"
+            >Conheça meu GitHub</a
+          >
+        </li>
+        <li>
+          <a href="https://vjr-joseroberto.github.io/igarape/">Igarapé</a>
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/operacaonatalcps/"
+            rel="noopener"
+            target="_blank"
+            >Operacao Natal 2024</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.ime.unicamp.br/~semap/"
+            rel="noopener"
+            target="_blank"
+            >SEMAP</a
+          >
+        </li>
+      </ul>
+      <div id="social-links">
+        <a
+          href="https://github.com/vjr-joseroberto"
+          rel="noopener"
+          target="_blank"
+        >
+          <ion-icon name="logo-github">a</ion-icon>
+        </a>
+        <a
+          href="https://www.instagram.com/vjr.joseroberto"
+          rel="noopener"
+          target="_blank"
+        >
+          <ion-icon name="logo-instagram">a</ion-icon>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/jos%C3%A9-roberto-vieira-junior-4549b1105?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+          rel="noopener"
+          target="_blank"
+        >
+          <ion-icon name="logo-linkedin">a</ion-icon>
+        </a>
+        <a href="tel:+5511994074070" rel="noopener" target="_blank">
+          <ion-icon name="logo-whatsapp">a</ion-icon>
+        </a>
+        <a
+          href="mailto:vjr.joseroberto@gmail.com"
+          rel="noopener"
+          target="_blank"
+        >
+          <ion-icon name="mail">a</ion-icon>
+        </a>
+      </div>
 
-        <script src="./script.js"></script>
-    </body>
+      <footer>Deixe que seus medos morram de fome</footer>
+      <!--let your fears starve
+
+    let your fears die of hunger
+
+    let your fears starve to death
+
+    let your fears die of starvation-->
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <!--utilizado para gerar os icons
+        https://ionic.io/ionicons/usage -->
+
+    <script src="./indexJS.js"></script>
+    <!--troca o idioma-->
+    <script src="./script.js"></script>
+    <!--mudar de cor-->
+  </body>
 </html>

@@ -17,13 +17,24 @@
 
 
 .light{
-    --text-color: black;
+    --text-color: #ffffff;
     --bg-url: url(./assets/im1.jpg);
     --stroke-color:rgba(0, 0, 0, 0.5);
     --surface-color: rgba(0, 0, 0, 0.05);
     --surface-color-hover: rgba(0, 0, 0, 0.02);
     --highlight-color: rgba(0, 0, 0, 0.1);
     --switch-bg-url: url(./assets/sun.svg);
+}
+
+header {
+    padding: 24px;
+    text-align: right;
+}
+
+header img:hover {
+    background: var(--highlight-color);
+    padding: 16px;
+    border-radius: 50%;
 }
 
 body {
@@ -34,7 +45,7 @@ body {
     /*agrupando tudo
     background: color image repeat position/size*/
     background: var(--bg-url) no-repeat top center/cover;
-    
+    height: 100vh;
 }
 
 body * {
@@ -47,6 +58,9 @@ body * {
 
 #container {
     width: 360px;
+    width: 100%;
+    max-height: 588px;
+    /*max é usado para deixar dinamico*/
     /*height: 712px;*/
     /*border: 1px solid red;  
     /*margin-right: auto; /*deixando a caixa centralizada*/
@@ -111,12 +125,19 @@ body * {
     z-index: 1;
     transform: translateY(-50%);
     /*tamanho dele para fora da caixa*/
+
+    animation: deslizamento-volta 0.4s;
 }
 
 .light #switch button {
-    right: 0;
-    left: initial;
-}
+    animation: deslizamento 0.4s forwards;
+} /* uso a animacao para colocar mais suavidade no botao de deslizar
+forwards - manter as propriedades que estava anteriormente */
+
+#switch button:hover {
+    outline: 8px solid var(--highlight-color);
+} /*deixa uma sombra dentro no botao*/
+
 
 /*track - botao*/
 #switch span{
@@ -208,4 +229,36 @@ footer {
     text-align: center;
     justify-content: center;
     font-size: 14px;
+    color: #ffffff;
+}
+
+/* media queries 
+@media (min-width: 700px) {
+    :root {
+        --bg-url: url(./assets/im2.jpg);
+    }
+
+    .light {
+        --bg-url: url(./assets/im3.jpg);
+    }
+}  /*faco isso para mudar dependendo da midia onde se esta vendo, celular ou notebook*/
+
+
+/* animation */
+@keyframes deslizamento {
+    from {
+        left: 0;
+    }
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes deslizamento-volta {
+    from{
+        left: 50%;
+    }
+    to {
+        left: 0;
+    }
 }

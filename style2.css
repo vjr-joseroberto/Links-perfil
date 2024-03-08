@@ -1,0 +1,111 @@
+:root {
+    font-size: 6.25%;
+}
+
+
+body {
+    background-color: rgb(134, 134, 189);
+}
+
+div p {
+    color: rgb(0, 0, 0);
+    font-size: 18rem;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.slideshow {
+    display: flex;
+    overflow: hidden;
+    width: 100%; /* Largura da área visível do slideshow */
+    height: 400px; /* Altura da área visível do slideshow */
+    position: relative;
+}
+
+figure {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+#social-links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 24px 0;
+    font-size: 24px;
+}
+
+#social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    transition: background 0.2s;
+    border-radius: 50%;
+    /*tirar o border e fica no quadrado para o circulo, interessante de ver*/
+}
+
+#social-links a:hover {
+    background: rgba(255, 255, 255, 0.138);
+    padding: 16px;
+    border-radius: 50%;
+}
+
+
+footer a {
+    color: white;
+}
+
+footer {
+    font-family: "Roboto", sans-serif;
+    font-size: 12rem;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+@media (max-width: 700px) {
+    /* Ocultar todas as imagens 
+    .slideshow figure {
+        content: url('assets/recorte/1.jpg');
+    }
+    
+    /* Exibir apenas as primeiras 2 imagens responsivas 
+    .slideshow figure:nth-child(2) {
+        content: url('assets/recorte/2.jpg');
+    }
+
+    .slideshow figure:nth-child(3) {
+        content: url('assets/recorte/3.jpg');
+    }
+
+    .slideshow figure:nth-child(4) {
+        content: url('assets/recorte/4.jpg');
+    }
+}*/
