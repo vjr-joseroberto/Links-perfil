@@ -15,7 +15,6 @@
     --switch-bg-url: url(./assets/moon-stars.svg);
 } /*definindo uma variavel, tudo que tiver o nome --text-color sera branco*/
 
-
 .light{
     --text-color: #ffffff;
     --bg-url: url(./assets/im1.jpg);
@@ -262,3 +261,4 @@ footer {
         left: 0;
     }
 }
+

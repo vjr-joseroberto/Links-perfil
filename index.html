@@ -15,29 +15,40 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="shortcut icon" href="assets/VJR.png" type="image/x-icon" />
     <!--./ significa esta na mesma pasta; poderia deixar direto sem tbm se tiver na mesma pasta-->
+    <style>
+      .lang:not(.pt) {
+        display: none;
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <img
-        id="bandeira-usa"
-        width="48"
-        height="48"
-        src="https://img.icons8.com/emoji/48/united-states-emoji.png"
-        alt="united-states-emoji"
-      />
+    <header class="language-selector">
       <img
         id="bandeira-bra"
-        width="48"
-        height="48"
+        class="language-option" 
+        data-lang="pt"
+        width="24"
+        height="24"
         src="https://img.icons8.com/emoji/48/brazil-emoji.png"
         alt="brazil-emoji"
       />
       <img
         id="bandeira-esp"
-        width="48"
-        height="48"
+        class="language-option" 
+        data-lang="es"
+        width="24"
+        height="24"
         src="https://img.icons8.com/emoji/48/spain-emoji.png"
         alt="spain-emoji"
+      />
+      <img
+        id="bandeira-usa"
+        class="language-option" 
+        data-lang="en"
+        width="24"
+        height="24"
+        src="https://img.icons8.com/emoji/48/united-states-emoji.png"
+        alt="united-states-emoji"
       />
     </header>
     <!--id é o identificador, so posso ter um com cada nome ou tera erro-->
@@ -56,7 +67,7 @@
         <span></span>
       </div>
 
-      <ul>
+      <ul class="lang pt">
         <li class="a1">
           <a href="./home.html">Quem sou eu?</a>
         </li>
@@ -69,14 +80,19 @@
           >
         </li>
         <li>
-          <a href="https://vjr-joseroberto.github.io/igarape/">Igarapé</a>
+          <a 
+            href="https://vjr-joseroberto.github.io/igarape/"
+            rel="noopener"
+            target="_blank"
+            >Igarapé</a
+          >
         </li>
         <li>
           <a
             href="https://www.instagram.com/operacaonatalcps/"
             rel="noopener"
             target="_blank"
-            >Operacao Natal 2024</a
+            >Operação Natal</a
           >
         </li>
         <li>
@@ -88,6 +104,83 @@
           >
         </li>
       </ul>
+
+
+
+      <ul class="lang en">
+        <li class="a1">
+          <a href="./home.html">Who I am?</a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/vjr-joseroberto"
+            rel="noopener"
+            target="_blank"
+            >Get to know my GitHub</a
+          >
+        </li>
+        <li>
+          <a href="https://vjr-joseroberto.github.io/igarape/">Igarapé</a>
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/operacaonatalcps/"
+            rel="noopener"
+            target="_blank"
+            >christmas Operation</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.ime.unicamp.br/~semap/"
+            rel="noopener"
+            target="_blank"
+            >SEMAP - Applied Mathematics Week</a
+          >
+        </li>
+      </ul>
+
+
+
+      
+      <ul class="lang es">
+        <li class="a1">
+          <a href="./home.html">¿quién soy?</a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/vjr-joseroberto"
+            rel="noopener"
+            target="_blank"
+            >Conoce mi GitHub</a
+          >
+        </li>
+        <li>
+          <a href="https://vjr-joseroberto.github.io/igarape/">Igarapé</a>
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/operacaonatalcps/"
+            rel="noopener"
+            target="_blank"
+            >Operación Navidad</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.ime.unicamp.br/~semap/"
+            rel="noopener"
+            target="_blank"
+            >SEMAP - Semana de las Matemáticas Aplicadas</a
+          >
+        </li>
+      </ul>
+
+
+
+
+
+
       <div id="social-links">
         <a
           href="https://github.com/vjr-joseroberto"
@@ -122,15 +215,21 @@
         </a>
       </div>
 
-      <footer>Deixe que seus medos morram de fome</footer>
-      <!--let your fears starve
+      <footer>
+        <div class="lang pt">
+          <p>Deixe que seus medos morram de fome</p>
+        </div>
+        <div class="lang en">
+          <p>let your fears starve</p>
+        </div>
+        <div class="lang es">
+          <p>Deja que tus miedos pasen hambre</p>
+        </div>
+      </footer>
 
-    let your fears die of hunger
+    
 
-    let your fears starve to death
 
-    let your fears die of starvation-->
-    </div>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -142,7 +241,7 @@
     <!--utilizado para gerar os icons
         https://ionic.io/ionicons/usage -->
 
-    <script src="./indexJS.js"></script>
+    <script src="./traducaoJS.js"></script>
     <!--troca o idioma-->
     <script src="./script.js"></script>
     <!--mudar de cor-->
