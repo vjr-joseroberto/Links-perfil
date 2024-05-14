@@ -1,3 +1,28 @@
+#natal {
+    color: verde; /* cor inicial */
+    transition: color 0.3s ease; /* suaviza a transição da cor */
+}
+
+#natal:hover {
+    color: vermelho; /* cor quando o mouse passa por cima */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :root {
     font-size: 6.25%;
 }
@@ -16,6 +41,8 @@ header img:hover {
     padding: 16px;
     border-radius: 50%;
 }
+
+
 
 div p {
     color: rgb(0, 0, 0);
@@ -49,12 +76,12 @@ figure img {
 
 #text a {
     text-decoration: none; /* Remover sublinhado */
-    color: #bbbbbb; /* Cor do texto padrão */
+    color: #0d00ffdb; /* Cor do texto padrão 0d00ff97*/
     transition: color 0.3s; /* Transição suave para mudança de cor */
 }
 
 #text a:hover {
-    color: #000; /* Cor do texto quando o mouse passa por cima */
+    color: #000000; /* Cor do texto quando o mouse passa por cima */
 }
 
 #social-links {

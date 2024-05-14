@@ -1,0 +1,37 @@
+.feliz-natal {
+    animation: saltar 0.5s infinite alternate;
+}
+
+@keyframes saltar {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+.feliz-natal {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+.feliz-natal {
+    background: linear-gradient(to right, red, green, rgb(218, 165, 32));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/*
+.feliz-natal {
+    animation: piscar 1s infinite alternate;
+}
+
+@keyframes piscar {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
